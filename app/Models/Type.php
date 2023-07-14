@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Type extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+
+    public function works()
+    {
+        return $this->belongTo(Work::class);
+    }
 }
